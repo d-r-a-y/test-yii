@@ -1,4 +1,4 @@
 test-yii
 ========
 
-just for testing )
+just for testing
