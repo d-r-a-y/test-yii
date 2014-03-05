@@ -1,0 +1,16 @@
+2014/01/29 22:37:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test-yii/index.php?r=user
+---
+2014/01/29 22:38:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test-yii/index.php?r=user
+---
