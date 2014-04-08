@@ -14,3 +14,542 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/test-yii/index.php?r=user
 ---
+2014/03/05 20:41:30 [error] [php] Non-static method CModel::getErrors() should not be called statically, assuming $this from incompatible context (C:\Zend\Apache2\htdocs\test-yii\protected\controllers\TestController.php:17)
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): TestController->runAction()
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): TestController->runActionWithFilters()
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): TestController->run()
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/test-yii/index.php?r=test/index
+in C:\Zend\Apache2\htdocs\test-yii\protected\controllers\TestController.php (17)
+in C:\Zend\Apache2\htdocs\test-yii\index.php (13)
+2014/03/05 20:48:45 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "test".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php:878
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(782): CController->renderPartial('test', Array, true)
+#1 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\TestController.php(17): CController->render('test', Array)
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): TestController->actionIndex()
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('index')
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('test/index')
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test-yii/index.php?r=test/index
+---
+2014/03/05 21:35:31 [error] [exception.CException] exception 'CException' with message 'TestController and its behaviors do not have a method or closure named "getSection".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\main.php(52): CComponent->__call('getSection', Array)
+#1 C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\main.php(52): TestController->getSection()
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require('C:\Zend\Apache2...')
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Zend\Apache2...', Array, true)
+#4 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\Zend\Apache2...', Array, true)
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require('C:\Zend\Apache2...')
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Zend\Apache2...', Array, true)
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(784): CBaseController->renderFile('C:\Zend\Apache2...', Array, true)
+#13 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\TestController.php(17): CController->render('index', Array)
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): TestController->actionIndex()
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('index')
+#19 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('test/index')
+#20 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/test-yii/index.php?r=test/index
+---
+2014/04/08 19:45:50 [error] [php] Undefined variable: route (C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\main.php:35)
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(206): CContentDecorator->run()
+#4 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(300): SiteController->endWidget()
+#5 C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\column1.php(6): SiteController->endContent()
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require()
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(784): SiteController->renderFile()
+#9 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(32): SiteController->render()
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): SiteController->runAction()
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): SiteController->run()
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/test-yii/
+in C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\main.php (35)
+in C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\column1.php (6)
+in C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php (32)
+2014/04/08 19:47:01 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.request" is not defined.' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\main.php(40): CComponent->__get('request')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require('C:\Zend\Apache2...')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Zend\Apache2...', Array, true)
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\Zend\Apache2...', Array, true)
+#4 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(206): COutputProcessor->run()
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#8 C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#9 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require('C:\Zend\Apache2...')
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Zend\Apache2...', Array, true)
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(784): CBaseController->renderFile('C:\Zend\Apache2...', Array, true)
+#12 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(32): CController->render('index')
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('')
+#18 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#19 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/test-yii/
+---
+2014/04/08 20:04:48 [error] [php] Missing argument 1 for CApplication::createUrl(), called in C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\main.php on line 13 and defined (C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php:541)
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(206): CContentDecorator->run()
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(300): SiteController->endWidget()
+#6 C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\column1.php(6): SiteController->endContent()
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require()
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(784): SiteController->renderFile()
+#10 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(32): SiteController->render()
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/test-yii/
+in C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\main.php (13)
+in C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\column1.php (6)
+in C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php (32)
+2014/04/08 20:05:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test-yii/index.php?r=index
+HTTP_REFERER=http://localhost/test-yii/
+---
+2014/04/08 20:05:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test-yii/index.php?r=index
+HTTP_REFERER=http://localhost/test-yii/index.php?r=index
+---
+2014/04/08 20:15:26 [error] [php] Missing argument 1 for CApplication::createUrl(), called in C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\main.php on line 39 and defined (C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php:541)
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(206): CContentDecorator->run()
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(300): SiteController->endWidget()
+#6 C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\column1.php(6): SiteController->endContent()
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require()
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(784): SiteController->renderFile()
+#10 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(32): SiteController->render()
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/test-yii/
+in C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\main.php (39)
+in C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\column1.php (6)
+in C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php (32)
+2014/04/08 20:38:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php:483
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test-yii/index.php/user/login
+HTTP_REFERER=http://localhost/test-yii/index.php/site
+---
+2014/04/08 20:52:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php:483
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test-yii/user/login
+HTTP_REFERER=http://localhost/test-yii/site
+---
+2014/04/08 20:58:30 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.username" is not defined.' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2529): CComponent->__get('username')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(LoginForm), 'username')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(LoginForm), 'username', Array)
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(LoginForm), 'username', Array)
+#4 C:\Zend\Apache2\htdocs\test-yii\protected\views\site\login.php(29): CActiveForm->textField(Object(LoginForm), 'username')
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require('C:\Zend\Apache2...')
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Zend\Apache2...', Array, true)
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(869): CBaseController->renderFile('C:\Zend\Apache2...', Array, true)
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/test-yii/site/login
+HTTP_REFERER=http://localhost/test-yii/site
+---
+2014/04/08 20:59:22 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.username" is not defined.' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2529): CComponent->__get('username')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(LoginForm), 'username')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(LoginForm), 'username', Array)
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(LoginForm), 'username', Array)
+#4 C:\Zend\Apache2\htdocs\test-yii\protected\views\site\login.php(29): CActiveForm->textField(Object(LoginForm), 'username')
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require('C:\Zend\Apache2...')
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Zend\Apache2...', Array, true)
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(869): CBaseController->renderFile('C:\Zend\Apache2...', Array, true)
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/test-yii/site/login
+HTTP_REFERER=http://localhost/test-yii/site
+---
+2014/04/08 20:59:25 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.username" is not defined.' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2529): CComponent->__get('username')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(LoginForm), 'username')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(LoginForm), 'username', Array)
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(LoginForm), 'username', Array)
+#4 C:\Zend\Apache2\htdocs\test-yii\protected\views\site\login.php(29): CActiveForm->textField(Object(LoginForm), 'username')
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require('C:\Zend\Apache2...')
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Zend\Apache2...', Array, true)
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(869): CBaseController->renderFile('C:\Zend\Apache2...', Array, true)
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/test-yii/site/login
+HTTP_REFERER=http://localhost/test-yii/site
+---
+2014/04/08 20:59:32 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.username" is not defined.' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2529): CComponent->__get('username')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(LoginForm), 'username')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(LoginForm), 'username', Array)
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(LoginForm), 'username', Array)
+#4 C:\Zend\Apache2\htdocs\test-yii\protected\views\site\login.php(29): CActiveForm->textField(Object(LoginForm), 'username')
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require('C:\Zend\Apache2...')
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Zend\Apache2...', Array, true)
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(869): CBaseController->renderFile('C:\Zend\Apache2...', Array, true)
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/test-yii/site/login
+---
+2014/04/08 20:59:49 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "C:\Zend\Apache2\htdocs\test-yii\assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CAssetManager.php:138
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CAssetManager.php(123): CAssetManager->setBasePath('C:\Zend\Apache2...')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CAssetManager.php(217): CAssetManager->getBasePath()
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\zii\widgets\CListView.php(217): CAssetManager->publish('C:\Zend\Apache2...')
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(147): CListView->init()
+#4 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 C:\Zend\Apache2\htdocs\test-yii\protected\views\user\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require('C:\Zend\Apache2...')
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Zend\Apache2...', Array, true)
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(869): CBaseController->renderFile('C:\Zend\Apache2...', Array, true)
+#9 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#10 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\UserController.php(128): CController->render('index', Array)
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#22 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/test-yii/user
+---
+2014/04/08 20:59:56 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.username" is not defined.' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2529): CComponent->__get('username')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(LoginForm), 'username')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(LoginForm), 'username', Array)
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(LoginForm), 'username', Array)
+#4 C:\Zend\Apache2\htdocs\test-yii\protected\views\site\login.php(29): CActiveForm->textField(Object(LoginForm), 'username')
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require('C:\Zend\Apache2...')
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Zend\Apache2...', Array, true)
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(869): CBaseController->renderFile('C:\Zend\Apache2...', Array, true)
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/test-yii/site/login
+---
+2014/04/08 21:00:56 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.username" is not defined.' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2529): CComponent->__get('username')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(LoginForm), 'username')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(LoginForm), 'username', Array)
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(LoginForm), 'username', Array)
+#4 C:\Zend\Apache2\htdocs\test-yii\protected\views\site\login.php(29): CActiveForm->textField(Object(LoginForm), 'username')
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require('C:\Zend\Apache2...')
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Zend\Apache2...', Array, true)
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(869): CBaseController->renderFile('C:\Zend\Apache2...', Array, true)
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/test-yii/site/login
+---
+2014/04/08 21:01:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginf".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php:483
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(270): CController->missingAction('loginf')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('loginf')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginf')
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test-yii/site/loginf
+---
+2014/04/08 21:01:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginf".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php:483
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(270): CController->missingAction('loginf')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('loginf')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('user/loginf')
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test-yii/user/loginf
+---
+2014/04/08 21:01:15 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.username" is not defined.' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2529): CComponent->__get('username')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(LoginForm), 'username')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(LoginForm), 'username', Array)
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(LoginForm), 'username', Array)
+#4 C:\Zend\Apache2\htdocs\test-yii\protected\views\site\login.php(29): CActiveForm->textField(Object(LoginForm), 'username')
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require('C:\Zend\Apache2...')
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Zend\Apache2...', Array, true)
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(869): CBaseController->renderFile('C:\Zend\Apache2...', Array, true)
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/test-yii/site/login
+---
+2014/04/08 21:01:36 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.username" is not defined.' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2529): CComponent->__get('username')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(LoginForm), 'username')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(LoginForm), 'username', Array)
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(LoginForm), 'username', Array)
+#4 C:\Zend\Apache2\htdocs\test-yii\protected\views\site\login.php(29): CActiveForm->textField(Object(LoginForm), 'username')
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require('C:\Zend\Apache2...')
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Zend\Apache2...', Array, true)
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(869): CBaseController->renderFile('C:\Zend\Apache2...', Array, true)
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/test-yii/site/login
+---
+2014/04/08 21:01:38 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.username" is not defined.' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2529): CComponent->__get('username')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(LoginForm), 'username')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(LoginForm), 'username', Array)
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(LoginForm), 'username', Array)
+#4 C:\Zend\Apache2\htdocs\test-yii\protected\views\site\login.php(29): CActiveForm->textField(Object(LoginForm), 'username')
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require('C:\Zend\Apache2...')
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Zend\Apache2...', Array, true)
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(869): CBaseController->renderFile('C:\Zend\Apache2...', Array, true)
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/test-yii/site/login
+---
+2014/04/08 21:13:43 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "C:\Zend\Apache2\htdocs\test-yii\assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CAssetManager.php:138
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CAssetManager.php(123): CAssetManager->setBasePath('C:\Zend\Apache2...')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CAssetManager.php(217): CAssetManager->getBasePath()
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CClientScript.php(510): CAssetManager->publish('C:\Zend\Apache2...')
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CClientScript.php(547): CClientScript->getCoreScriptUrl()
+#4 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CClientScript.php(348): CClientScript->getPackageBaseUrl('jquery')
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(351): CClientScript->render('<!doctype html>...')
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(788): CController->processOutput('<!doctype html>...')
+#8 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#9 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/test-yii/site/login
+---
+2014/04/08 21:15:38 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "C:\Zend\Apache2\htdocs\test-yii\assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CAssetManager.php:138
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CAssetManager.php(123): CAssetManager->setBasePath('C:\Zend\Apache2...')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CAssetManager.php(217): CAssetManager->getBasePath()
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CClientScript.php(510): CAssetManager->publish('C:\Zend\Apache2...')
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CClientScript.php(547): CClientScript->getCoreScriptUrl()
+#4 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CClientScript.php(348): CClientScript->getPackageBaseUrl('jquery')
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(351): CClientScript->render('<!doctype html>...')
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(788): CController->processOutput('<!doctype html>...')
+#8 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#9 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/test-yii/site/login
+---
+2014/04/08 21:16:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php:483
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test-yii/user/login
+---
+2014/04/08 21:19:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php:483
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test-yii/user/login
+HTTP_REFERER=http://localhost/test-yii/site/login
+---
+2014/04/08 21:19:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php:483
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test-yii/user/login
+HTTP_REFERER=http://localhost/test-yii/site/login
+---
+2014/04/08 21:20:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php:483
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test-yii/user/login
+HTTP_REFERER=http://localhost/test-yii/user/login
+---
