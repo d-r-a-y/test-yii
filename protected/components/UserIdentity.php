@@ -18,9 +18,9 @@ class UserIdentity extends CUserIdentity
 	public function authenticate()
 	{
 		$users=array(
-			// username => password
-			'demo'=>'demo',
-			'admin'=>'admin',
+			// email => password
+			'demo@mail.com'=>'demo',
+			'admin@mail.com'=>'admin',
 		);
 		if(!isset($users[$this->username]))
 			$this->errorCode=self::ERROR_USERNAME_INVALID;

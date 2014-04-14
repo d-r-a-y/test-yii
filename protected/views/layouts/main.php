@@ -34,6 +34,8 @@
         <?php echo $content; ?>
     </div>
 
+    <?php print_r(Yii::app()->getSession()); ?>
+
     <footer class="navbar-static-bottom">
         <div class="container">
             <p class="copy">Copyright <?=date('Y');?> © <?php echo CHtml::encode(Yii::app()->name); ?></p>

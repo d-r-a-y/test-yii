@@ -89,3 +89,8 @@ footer {
 	display: block;
 	margin-bottom: 10px;
 }
+
+/* Custom style */
+.errorMessage{
+    color: red;
+}

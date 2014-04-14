@@ -553,3 +553,66 @@ Stack trace:
 REQUEST_URI=/test-yii/user/login
 HTTP_REFERER=http://localhost/test-yii/user/login
 ---
+2014/04/14 22:46:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php:483
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/gr1.jp...')
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test-yii/site/img/gr1.jpg
+HTTP_REFERER=http://localhost/test-yii/site/login
+---
+2014/04/14 22:46:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php:483
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/gr1.jp...')
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test-yii/site/img/gr1.jpg
+HTTP_REFERER=http://localhost/test-yii/site/login
+---
+2014/04/14 22:52:49 [error] [php] Undefined variable: _SESSION (C:\Zend\Apache2\htdocs\test-yii\protected\views\site\login.php:61)
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(98): SiteController->render()
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/test-yii/site/login
+in C:\Zend\Apache2\htdocs\test-yii\protected\views\site\login.php (61)
+in C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php (98)
+in C:\Zend\Apache2\htdocs\test-yii\index.php (13)
+2014/04/14 22:53:52 [error] [php] Undefined variable: _SESSION (C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\main.php:37)
+Stack trace:
+#0 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#1 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(206): CContentDecorator->run()
+#4 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(300): SiteController->endWidget()
+#5 C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\column1.php(6): SiteController->endContent()
+#6 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(126): require()
+#7 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(784): SiteController->renderFile()
+#9 C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php(98): SiteController->render()
+#10 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(286): SiteController->runAction()
+#13 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(282): SiteController->run()
+#15 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\Zend\Apache2\htdocs\yii-1.1.14\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\Zend\Apache2\htdocs\test-yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/test-yii/site/login
+in C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\main.php (37)
+in C:\Zend\Apache2\htdocs\test-yii\protected\views\layouts\column1.php (6)
+in C:\Zend\Apache2\htdocs\test-yii\protected\controllers\SiteController.php (98)
