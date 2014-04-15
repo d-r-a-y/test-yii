@@ -9,49 +9,43 @@ $this->breadcrumbs=array(
 );
 ?>
 <div class="row">
-    <div class="col-sm-12 col-md-12 col-lg-12">
-        <h1>Login</h1>
-        <p>Please fill out the following form with your login credentials:</p>
-        <div class="cf"></div>
-        <div class="gr-box-1">
-            <p class="gr-box-1-title">Average score of active tests</p>
-        </div>
+    <div class="form">
+        <?php $form=$this->beginWidget('CActiveForm', array(
+            'id'=>'login-form',
+            'enableClientValidation'=>true,
+            'clientOptions'=>array(
+                'validateOnSubmit'=>true,
+            ),
+            'htmlOptions'=>array(
+                'class'=>'form-signin',
+                'role'=>'form',
+            ),
 
-        <div class="form">
-            <?php $form=$this->beginWidget('CActiveForm', array(
-                'id'=>'login-form',
-                'enableClientValidation'=>true,
-                'clientOptions'=>array(
-                    'validateOnSubmit'=>true,
-                ),
+        )); ?>
+        <?php echo $form->errorSummary($model); ?>
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <?php echo $form->textField($model,'email', array(
+                'class'=>'form-control',
+                'placeholder'=>'Email address'
+        )); ?>
+        <?php echo $form->passwordField($model,'password', array(
+            'class'=>'form-control',
+            'placeholder'=>'Password'
+        )); ?>
+
+        <?php echo $form->checkBox($model,'rememberMe'); ?>
+        <?php echo $form->label($model,'rememberMe'); ?>
+
+        <div class="actions buttons">
+            <?php echo CHtml::submitButton('Sign in', array(
+                'class' => 'btn btn-lg btn-primary btn-block',
             )); ?>
-
-            <p class="note">Fields with <span class="required">*</span> are required.</p>
-
-            <div class="">
-                <?php echo $form->labelEx($model,'email'); ?>
-                <?php echo $form->textField($model,'email'); ?>
-                <?php echo $form->error($model,'email'); ?>
-            </div>
-
-            <div class="">
-                <?php echo $form->labelEx($model,'password'); ?>
-                <?php echo $form->passwordField($model,'password'); ?>
-                <?php echo $form->error($model,'password'); ?>
-            </div>
-
-            <div class="rememberMe">
-                <?php echo $form->checkBox($model,'rememberMe'); ?>
-                <?php echo $form->label($model,'rememberMe'); ?>
-                <?php echo $form->error($model,'rememberMe'); ?>
-            </div>
-
-            <div class="buttons">
-                <?php echo CHtml::submitButton('Login'); ?>
-            </div>
-
-            <?php $this->endWidget(); ?>
+            <p class="reset">
+                <a tabindex="4" href="<?=Yii::app()->createUrl('site/resetpassword');?>" title="Recover your username or password">Recover your password</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="<?=Yii::app()->createUrl('site/registration');?>">Get Started</a>.
+            </p>
         </div>
-
+        <?php $this->endWidget(); ?>
     </div>
 </div>

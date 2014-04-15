@@ -34,7 +34,9 @@
         <?php echo $content; ?>
     </div>
 
-    <?php print_r(Yii::app()->getSession()); ?>
+    <pre>
+    <?php print_r(Yii::app()->getUser()); ?>
+    </pre>
 
     <footer class="navbar-static-bottom">
         <div class="container">
