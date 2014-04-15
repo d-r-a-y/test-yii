@@ -1,4 +1,4 @@
 .idea/
 README.md
-.assets/
-.runtime/application.log
+assets/
+protected/runtime/application.log
