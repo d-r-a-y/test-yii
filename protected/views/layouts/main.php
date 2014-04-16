@@ -21,11 +21,13 @@
             </div>
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="<?php echo Yii::app()->homeUrl; ?>">Dashboard</a></li>
-                    <li><a href="#">Workspace</a></li>
-                    <li><a href="#">Account Access</a></li>
-                    <li><a href="#">Kevin Khan</a></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('site/login'); ?>">Login</a></li>
+                    <li class=""><a href="<?php echo Yii::app()->homeUrl; ?>">Dashboard</a></li>
+                    <?php if (Yii::app()->user->isGuest): ?>
+                        <li><a href="<?php echo Yii::app()->createUrl('site/login'); ?>">Login</a></li>
+                    <?php else: ?>
+                        <li><a href="#"><?=Yii::app()->user->getName();?></a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('site/logout'); ?>">Logout</a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
@@ -35,7 +37,7 @@
     </div>
 
     <pre>
-    <?php print_r(Yii::app()->getUser()); ?>
+        <?php print_r(Yii::app()->authManager); ?>
     </pre>
 
     <footer class="navbar-static-bottom">

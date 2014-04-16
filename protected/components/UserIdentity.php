@@ -17,6 +17,9 @@ class UserIdentity extends CUserIdentity
 	 */
 
     public $email;
+    public $password;
+    public $firstName;
+    public $lastName;
     private $_id;
 
     public function __construct($email,$password)
@@ -31,14 +34,25 @@ class UserIdentity extends CUserIdentity
 
         if($record===null)
             $this->errorCode=self::ERROR_USERNAME_INVALID;
-        else if($record->password!==md5($this->password,$record->password))
+        else if($record->password !== md5($this->password))
             $this->errorCode=self::ERROR_PASSWORD_INVALID;
         else
         {
             $this->_id=$record->id;
-            $this->setState('title', $record->title);
+            $this->firstName=$record->firstName;
+            $this->lastName=$record->lastName;
             $this->errorCode=self::ERROR_NONE;
         }
         return !$this->errorCode;
 	}
+
+    public function getName()
+    {
+        return $this->firstName . ' ' . $this->lastName;
+    }
+
+    public function getId()
+    {
+        return $this->_id;
+    }
 }

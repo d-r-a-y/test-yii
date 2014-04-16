@@ -55,6 +55,11 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
+        'authManager'=>array(
+            //'class'=>'CDbAuthManager',
+            'class'=>'CPhpAuthManager',
+            'connectionID'=>'db',
+        ),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
