@@ -51,13 +51,16 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=test-yii',
 			'emulatePrepare' => true,
+			'autoConnect' => false,
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
+			'enableParamLogging' => true,
+			'enableProfiling' => true,
 		),
         'authManager'=>array(
-            //'class'=>'CDbAuthManager',
-            'class'=>'CPhpAuthManager',
+            'class'=>'CDbAuthManager',
+            //'class'=>'CPhpAuthManager',
             'connectionID'=>'db',
         ),
 		'errorHandler'=>array(
@@ -72,11 +75,9 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
 				array(
 					'class'=>'CWebLogRoute',
 				),
-				*/
 			),
 		),
 	),

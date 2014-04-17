@@ -37,7 +37,18 @@
     </div>
 
     <pre>
-        <?php print_r(Yii::app()->authManager); ?>
+        <?php
+        $row = Yii::app()->db->createCommand()
+            ->select('*')
+            ->from('tbl_user')
+            ->where('id = :id', array(':id' => 1))
+            ->orWhere('id = :id2', array(':id2' => 2))
+            ->queryAll();
+
+        print_r($row);
+
+
+        ?>
     </pre>
 
     <footer class="navbar-static-bottom">
