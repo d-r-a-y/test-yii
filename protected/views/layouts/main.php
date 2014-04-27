@@ -38,16 +38,8 @@
 
     <pre>
         <?php
-        $row = Yii::app()->db->createCommand()
-            ->select('*')
-            ->from('tbl_user')
-            ->where('id = :id', array(':id' => 1))
-            ->orWhere('id = :id2', array(':id2' => 2))
-            ->queryAll();
-
-        print_r($row);
-
-
+        Yii::app()->cache->set('var', 'hello', 5);
+        print Yii::app()->cache->get('var');
         ?>
     </pre>
 

@@ -80,6 +80,9 @@ return array(
 				),
 			),
 		),
+        'cache'=>array(
+            'class'=>'system.caching.CZendDataCache',
+        ),
 	),
 
 	// application-level parameters that can be accessed
